@@ -3,7 +3,7 @@ import csv
 
 # input and output files
 data = os.path.join(".", "election_data.csv")
-output = os.path.join(".", "election_output.txt")
+#output = os.path.join(".", "election_output.txt")
 
 # initial values of votes
 total_votes = 0
