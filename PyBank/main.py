@@ -4,7 +4,6 @@ import numpy as np
 
 # input and ourput files
 data = os.path.join(".", "budget_data.csv")
-output = os.path.join(".", "budget_output.txt")
 
 # initial values and defining variables as lists
 total_months = 0
