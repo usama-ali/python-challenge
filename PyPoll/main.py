@@ -16,6 +16,7 @@ winning_vote = 0
 
 with open(data) as csvdata:
     csvreader = csv.reader(csvdata)
+
     # reading the first row (header)
     header = next(csvreader)
 
@@ -30,35 +31,21 @@ with open(data) as csvdata:
 
         candidate_votes_dict[candidate_name] = candidate_votes_dict[candidate_name] + 1
 
-#with open(output, "w") as txt_file:
-
-#    election_results = ()
-
 print(f"Election Results")
 print(f"----------------------")
 print(f"Total Votes: {total_votes}")
 print(f"----------------------")
-    for candidate in candidate_votes_dict:
-        votes = candidate_votes_dict.get(candidate)
-        votes_percent = float(votes). float(total_votes)*100
 
-        if (votes > winning_vote):
-            winning_vote = votes
-            winning_candidate = candidate
+for candidate in candidate_votes_dict:
+    votes = candidate_votes_dict.get(candidate)
+    votes_percent = float(votes) / float(total_votes)*100
 
-        print(f"{candidate}: {votes_percent:.2f} ({votes})")
+    if (votes > winning_vote):
+        winning_vote = votes
+        winning_candidate_st = candidate
 
+    print(f"{candidate}: {votes_percent:.2f}% ({votes})")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(f"----------------------")
+print(f" Winner: {winning_candidate_st}")
+print(f"----------------------")
